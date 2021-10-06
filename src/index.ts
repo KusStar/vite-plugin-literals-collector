@@ -4,12 +4,25 @@ import { Plugin } from 'vite'
 
 interface Options {
   /**
-   * include file
+   * included filed or folder, defaults to [/\.ts$/, /\.js$/]
    */
   include?: FilterPattern
+  /**
+   * excluded files or folder, defaults to undefined
+   */
   exclude?: FilterPattern
+  /**
+   * wanted matching characters
+   */
   target?: FilterPattern
+  /**
+   * onResult logger, defaults to (final: string[]) =>
+   *  console.log(`* LiteralsCollector: collected ${final.length} characters`)
+   */
   formatter?: (result: string[]) => void
+  /**
+   * result callback, defaults to undefined
+   */
   onResult?: (result: string[]) => void
 }
 

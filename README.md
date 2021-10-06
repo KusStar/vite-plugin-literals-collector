@@ -35,11 +35,27 @@ export default {
 
 ```ts
 interface Options {
-    include?: FilterPattern;
-    exclude?: FilterPattern;
-    target?: FilterPattern;
-    formatter?: (result: string[]) => void;
-    done?: (result: string[]) => void;
+  /**
+   * included filed or folder, defaults to [/\.ts$/, /\.js$/]
+   */
+  include?: FilterPattern
+  /**
+   * excluded files or folder, defaults to undefined
+   */
+  exclude?: FilterPattern
+  /**
+   * wanted matching characters
+   */
+  target?: FilterPattern
+  /**
+   * onResult logger, defaults to (final: string[]) =>
+   *  console.log(`* LiteralsCollector: collected ${final.length} characters`)
+   */
+  formatter?: (result: string[]) => void
+  /**
+   * result callback, defaults to undefined
+   */
+  onResult?: (result: string[]) => void
 }
 ```
 
