@@ -17,7 +17,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "vite": "^2.4.3"
+    "vite": "^2.6.3"
   },
   "dependencies": {
     "@rollup/pluginutils": "^4.1.1"
