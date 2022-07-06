@@ -7,7 +7,7 @@
 Install
 
 ```cmd
-$ yarn add --D vite-plugin-literals-collector
+$ yarn add -D vite-plugin-literals-collector
 # or npm i -D vite-plugin-literals-collector
 ```
 
